@@ -1,0 +1,18 @@
+<resources>
+
+    <style name="Widget.Theme.Linkedin_Clone.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+    </style>
+
+    <style name="NormalToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CompactToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:minHeight">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="contentInsetStart">4dp</item>
+    </style>
+
+</resources>

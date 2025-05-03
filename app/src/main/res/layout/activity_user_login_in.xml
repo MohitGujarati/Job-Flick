@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiElements.user_LoginIn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_250dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+
+<!--            <androidx.constraintlayout.motion.widget.MotionLayout-->
+<!--                android:id="@+id/motionLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                style="@style/Loginbackground"-->
+<!--                app:layoutDescription="@xml/activityloginscene">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:scaleType="center"-->
+<!--                    android:alpha="0.3"-->
+<!--                    android:src="@drawable/logologinbackground"-->
+<!--                    tools:layout_editor_absoluteX="0dp"-->
+<!--                    tools:layout_editor_absoluteY="0dp" />-->
+<!--            </androidx.constraintlayout.motion.widget.MotionLayout>-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimenMinus_136dp"
+                android:adjustViewBounds="true"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textSize="@dimen/dimen_30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimenMinus_25dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/GoogleSignin"
+                android:layout_marginTop="@dimen/dimen_70dp"
+                android:layout_width="@dimen/dimen_82dp"
+                style="@style/CustomBackground_LightBlueRounded"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_gravity="top"
+                android:padding="@dimen/dimenMinus_50dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:gravity="center">
+
+            <!-- Left dash -->
+            <View
+                android:layout_marginStart="@dimen/dimen_25dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:text="@string/OR"
+
+                android:textColor="@color/gray_400"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Right dash -->
+            <View
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/dimen_25dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:fontFamily="monospace"
+            android:text="@string/Login"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <!-- to occupy the rectangular area in right
+                 side so that message can be displayed in center-->
+
+            <EditText
+                android:id="@+id/userEmail"
+                style="@style/CustomBackground_LightBlueRounded"
+                android:hint="@string/Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_22dp" />
+
+
+            <!-- Edit text provided to write
+                  password -->
+            <LinearLayout
+                android:id="@+id/llPwsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16sp"
+                android:layout_weight="2"
+                android:background="@drawable/background_profileview"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edUserPassword"
+                    android:inputType="textWebPassword"
+                    android:layout_weight="1"
+                    android:hint="@string/Password"
+                    style="@style/CustomEditTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/imgPws"
+                    android:layout_width="@dimen/dimen_25dp"
+                    android:layout_height="@dimen/dimen_22dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:src="@drawable/ic_hide" />
+            </LinearLayout>
+
+
+            <!-- material button is used to display the "Login" button to user-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                style="@style/buttonMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_18dp"
+                android:padding="12dp"
+                android:text="@string/Login"
+                />
+
+            <ProgressBar
+
+                android:id="@+id/pbLogin"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:indeterminate="true"
+                android:max="100"
+                android:progress="0"
+                android:progressBackgroundTint="@color/light_blue_600"
+                android:progressTint="@color/light_blue_600"
+                android:secondaryProgress="0"
+                android:visibility="gone" />
+            <!-- textview displaying the message "Do have account?Click to Signup"-->
+            <TextView
+                android:fontFamily="@font/roboto_medium"
+                android:id="@+id/tvSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/NoAccount"
+                android:textSize="@dimen/dimen_14sp" />
+
+
+
+            <!--            android:drawableTop="@drawable/common_google_signin_btn_icon_light" -->
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+

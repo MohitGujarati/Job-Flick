@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Linkedin_Clone" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <!-- Define the style for the buttonMain (Login and sign up) -->
+    <style name="buttonMain" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="cornerRadius">20dp</item>
+        <item name="elevation">20dp</item>
+        <item name="buttonStyle">@style/Widget.Material3.Button.TonalButton</item>
+        <item name="backgroundTint">#1E88E5</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="itemIconTint">@color/light_blue_600</item>
+        <item name="itemTextColor">@color/white</item>
+    </style>
+</resources>

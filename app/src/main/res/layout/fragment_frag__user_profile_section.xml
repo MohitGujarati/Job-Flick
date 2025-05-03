@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <!-- Banner Image -->
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:background="?attr/colorPrimaryContainer"
+            tools:ignore="NotSibling" />
+
+        <!-- Profile Image -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileImageContainer"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="55dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/bannerImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bannerImage"
+            app:layout_constraintVertical_bias="0.5">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="?attr/colorSurfaceVariant" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Floating Edit Button -->
+
+        <!-- Name and Verified Icon -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editProfileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="?attr/colorPrimary"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@+id/profileName"
+            app:layout_constraintEnd_toEndOf="@+id/bannerImage"
+            app:layout_constraintHorizontal_bias="0.93"
+            app:layout_constraintStart_toEndOf="@+id/profileImageContainer"
+            app:layout_constraintTop_toBottomOf="@+id/bannerImage"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
+            android:text="@string/app_name"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bannerImage" />
+
+        <ImageView
+            android:id="@+id/verifiedIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_verified"
+            app:layout_constraintBottom_toBottomOf="@id/profileName"
+            app:layout_constraintStart_toEndOf="@id/profileName"
+            app:layout_constraintTop_toTopOf="@id/profileName" />
+
+        <!-- Description and Details -->
+        <TextView
+            android:id="@+id/profileDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/user_skills_description"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/profileName" />
+
+        <TextView
+            android:id="@+id/profileStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/user_status_description"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/profileDescription" />
+
+        <TextView
+            android:id="@+id/profileLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/user_location"
+            android:textColor="?attr/colorOutline"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/profileStatus" />
+
+        <!-- Website -->
+        <TextView
+            android:id="@+id/websiteLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/user_website"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileLocation" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_link"
+            app:layout_constraintBottom_toBottomOf="@id/websiteLink"
+            app:layout_constraintStart_toEndOf="@id/websiteLink"
+            app:layout_constraintTop_toTopOf="@id/websiteLink" />
+
+        <!-- Followers -->
+        <TextView
+            android:id="@+id/followersInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/user_followers"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/websiteLink" />
+
+        <!-- Buttons -->
+        <!-- Use ?attr/color... where applicable -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
