@@ -416,7 +416,7 @@
                             android:textStyle="bold" />
 
                         <ImageButton
-                            android:id="@+id/btnAddWorkExperience"
+                            android:id="@+id/btnExperienceEdit"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:background="?attr/selectableItemBackgroundBorderless"
@@ -649,7 +649,7 @@
                             android:textStyle="bold" />
 
                         <ImageButton
-                            android:id="@+id/btnAddEducation"
+                            android:id="@+id/btnEducationEdit"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:background="?attr/selectableItemBackgroundBorderless"
@@ -821,6 +821,7 @@
                 <!-- Projects & Outside Experience Section -->
                 <!-- Projects & Outside Experience Section -->
                 <LinearLayout
+                    android:id="@+id/btnProjectsEdit"
                     style="@style/CustomBackground_LightBlueRounded"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -26,12 +26,26 @@ class user_ApplyInforActivity : AppCompatActivity() {
         // Receiving job data
         val layoutFeature = intent.getStringExtra("layoutFeature")
 
+        // Set up edit buttons for different sections
         binding.btnAboutEdit.setOnClickListener {
-            val bottomSheet = EditProfileBottomSheet()
-            bottomSheet.show(supportFragmentManager, "EditProfileBottomSheet")
+            showEditBottomSheet("about")
         }
 
+        binding.btnExperienceEdit.setOnClickListener {
+            showEditBottomSheet("experience")
+        }
 
+        binding.btnEducationEdit.setOnClickListener {
+            showEditBottomSheet("education")
+        }
+
+        binding.btnEducationEdit.setOnClickListener {
+            showEditBottomSheet("education")
+        }
+
+        binding.btnAddProject.setOnClickListener {
+            showEditBottomSheet("projects")
+        }
 
         // Conditional layout logic
         if (layoutFeature == "true") {
@@ -52,6 +66,11 @@ class user_ApplyInforActivity : AppCompatActivity() {
             navigation.navigateToAnotherActivity(this, user_HomeActivity::class.java)
             finish()
         }
+    }
+
+    private fun showEditBottomSheet(sectionType: String) {
+        val bottomSheet = EditProfileBottomSheet.newInstance(sectionType)
+        bottomSheet.show(supportFragmentManager, "EditProfileBottomSheet")
     }
 
     private fun showFeatureView(binding: ActivityUserApplyInforBinding) {
